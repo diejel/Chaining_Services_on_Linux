@@ -1,0 +1,12 @@
+[Unit]
+Description=Upload Backup
+PartOf=do-backup.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/diego.zuniga/upload-backup.sh
+RemainAfterExit=yes
+User=root
+
+[Install]
+WantedBy=multi-user.target
