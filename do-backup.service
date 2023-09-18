@@ -1,0 +1,12 @@
+[Unit]
+Description=Perform Backup
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/home/diego.zuniga/do-backup.sh
+RemainAfterExit=yes
+ExecStartPost=/usr/bin/bash -c 'if [ "$( cat /tmp/exit_value)" == "SUCCESS" ]; then /usr/bin/systemctl start upload-backup.service ; fi'
+
+[Install]
+WantedBy=multi-user.target
