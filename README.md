@@ -1,6 +1,7 @@
 # Chaining_Services_on_Linux
 A briefly example about how to chaining services on Linux
 
+![chainin_services_diagram](https://github.com/diejel/Chaining_Services_on_Linux/assets/15971140/5d81548d-abf3-4364-96ac-97a2346535d3)
 
 ## The logic behind this example
 As intended to create a dummy service simulation, both scripts (do-backup & upload-backup)
